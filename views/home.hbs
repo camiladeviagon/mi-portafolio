@@ -1,0 +1,174 @@
+{{!-- HERO --}}
+<section class="hero fade-in">
+  <div class="hero-content container">
+      <p class="hero-eyebrow">Emprendimiento · Educación · Salud · Inclusión</p>
+
+      <h1 class="hero-title">Creo tecnología con sentido humano.</h1>
+
+      <p class="hero-subtitle">
+       Desarrolladora Full Stack JavaScript especializada en proyectos con impacto social, educación inclusiva y salud digital.
+      </p>
+  </div>
+</section>
+
+{{!-- SOBRE MÍ --}}
+<section id="sobre-mi" class="section container fade-in">
+    <h2 class="section-title">Sobre mí</h2>
+
+    <p class="section-text">
+        Soy Camila Devia, profesora y desarrolladora Full Stack JavaScript. Combino mi formación en educación con el desarrollo web para crear soluciones digitales que aporten a la calidad de vida de las personas, especialmente en contextos de vulnerabilidad social, rehabilitación y acompañamiento de trayectorias educativas.
+
+Me interesan los proyectos donde la tecnología no es solo una herramienta, sino una forma de cuidado, accesibilidad y autonomía para las personas.
+Estoy abierta a colaboraciones en proyectos de impacto social
+    </p>
+</section>
+
+{{!-- FORMACIÓN --}}
+<section id="formacion" class="section section-alt fade-in">
+    <div class="container">
+        <h2 class="section-title">Formación</h2>
+
+        <ul class="section-text">
+            <li>
+                <strong>Bootcamp Full Stack JavaScript – Talento Digital (2025)</strong><br>
+                Desarrollo web full stack, bases de datos, API REST, Git/GitHub, patrones de diseño
+                y buenas prácticas de programación.
+            </li>
+            <li><strong>Programa Oracle Next Education - 2025</strong> 
+                Fundamentos de programación, Desarrollo Front-End, Desarrollo Back-End, Metodologías Ágiles.
+            </li>
+            <li>
+                <strong>Profesora de Historia, geografía y ciencias sociales – Universidad de Chile (2019)</strong><br>
+                Formación pedagógica y especialización en educación inclusiva y atención a la diversidad.
+        </ul>
+
+        <h3 class="section-subtitle mt-4">Intereses</h3>
+        <ul class="section-text">
+            <li>Accesibilidad digital</li>
+            <li>Innovación educativa</li>
+            <li>Tecnología con impacto social</li>
+            <li>Rehabilitación y salud asistida por IA</li>
+            <li>Plataformas de acompañamiento a familias y Niñas, Niños y Jóvenes</li>
+        </ul>
+    </div>
+</section>
+<section class="py-5 bg-light" id="tecnologias">
+  <div class="container">
+    <h2 class="h3 mb-4 section-title">Tecnologías</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <h3 class="h6 text-muted text-uppercase">Frontend</h3>
+        <p class="small mb-1">HTML5 · CSS3 · JavaScript</p>
+        <p class="small mb-0">Bootstrap · Handlebars</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="h6 text-muted text-uppercase">Backend</h3>
+        <p class="small mb-1">Node.js · Express</p>
+        <p class="small mb-0">APIs REST · JWT</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="h6 text-muted text-uppercase">Herramientas</h3>
+        <p class="small mb-1">PostgreSQL · Git/GitHub</p>
+        <p class="small mb-0">Lovable · Make · Integración con IA</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{!-- PROYECTOS --}}
+<section id="proyectos" class="section container fade-in">
+    <h2 class="section-title">Proyectos</h2>
+    <p class="section-text">
+        Mis proyectos combinan desarrollo web con un enfoque social, abarcando rehabilitación,
+        educación y salud.
+    </p>
+
+    <div class="row g-4 mt-4">
+
+        {{#each projects}}
+        <div class="col-sm-6 col-md-4">
+            <article class="project-card h-100">
+                
+                <div class="project-logo-container">
+                    <img src="{{logo}}" alt="Logo {{name}}" class="project-logo">
+                </div>
+
+                <h3 class="project-title">{{name}}</h3>
+
+                <p class="project-desc">
+                    {{description}}
+                </p>
+
+                {{!-- TAGS --}}
+                {{#if tags}}
+                    <div class="project-tags">
+                        {{#each tags}}
+                            <span class="tag">{{this}}</span>
+                        {{/each}}
+                    </div>
+                {{/if}}
+
+                {{!-- STACK --}}
+                {{#if rol}}
+                    <p class="project-rol">
+                        Rol:
+                        {{#each rol}}
+                            {{this}}{{#unless @last}}, {{/unless}}
+                        {{/each}}
+                    </p>
+                {{/if}}
+
+            </article>
+        </div>
+        {{/each}}
+
+    </div>
+</section>
+
+{{!-- CONTACTO --}}
+<section id="contacto" class="py-5">
+  <div class="container">
+    <h2 class="h3 mb-3">Contacto</h2>
+    <p class="mb-4">
+      Si te interesa colaborar, conversar sobre mis proyectos o explorar nuevas ideas, puedes escribirme usando este formulario:
+    </p>
+
+    <form action="/contacto" method="POST">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          class="form-control"
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-dark w-100">Enviar</button>
+    </form>
+  </div>
+</section>
+

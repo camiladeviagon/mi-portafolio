@@ -1,0 +1,422 @@
+/* =============================
+   VARIABLES DE TEMA
+============================= */
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --border: #e4e4e4;
+  --black: #000000;
+  --accent: #546daf;
+  --card-bg: #ffffff;
+  --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+  --bg: #111111;
+  --text: #f5f5f5;
+  --muted: #b3b3b3;
+  --border: #2b2b2b;
+  --black: #ffffff;
+  --accent: #7fa5ff;
+  --card-bg: #1a1a1a;
+  --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* =============================
+   RESETEO Y BASE
+============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding-top: 70px; /* espacio para navbar fija */
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* =============================
+   NAVBAR
+============================= */
+
+.navbar {
+  background-color: var(--bg) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--accent) !important;
+}
+
+.nav-link {
+  color: var(--muted) !important;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover {
+  color: var(--text) !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Si agregas botón de modo oscuro en el futuro */
+#darkToggle {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+  margin-left: 0.5rem;
+  color: var(--muted);
+}
+
+#darkToggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* =============================
+   HERO
+============================= */
+
+.hero {
+  padding: 4rem 0 3rem;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.hero-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--text);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 600px;
+}
+
+/* =============================
+   SECCIONES GENERALES
+============================= */
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-alt {
+  padding: 3rem 0;
+  background-color: #f7f7f7;
+}
+
+[data-theme="dark"] .section-alt {
+  background-color: #181818;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 0.6rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-text {
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+/* listas dentro de secciones */
+.section-text li + li {
+  margin-top: 0.4rem;
+}
+
+/* =============================
+   TAGS (chips)
+============================= */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.tag {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.9rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+[data-theme="dark"] .tag {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* =============================
+   BOTONES
+============================= */
+
+.btn-black,
+.btn-dark {
+  background-color: var(--black);
+  color: #ffffff !important;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid var(--black);
+  font-size: 0.95rem;
+}
+
+.btn-black:hover,
+.btn-dark:hover {
+  opacity: 0.9;
+}
+
+.btn-outline-dark {
+  border-radius: 999px;
+  border: 1px solid #b0b0b0;
+  color: #444444 !important;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.95rem;
+  background: transparent;
+}
+
+.btn-outline-dark:hover {
+  border-color: var(--black);
+  color: var(--black) !important;
+}
+
+/* =============================
+   PROYECTOS
+============================= */
+
+.project-card {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 1.4rem 1.5rem;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .project-card:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.project-logo-container {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.project-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.project-card:hover .project-logo {
+  transform: translateY(-3px) scale(1.03);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.12));
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0.2rem 0;
+  color: var(--text);
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  flex: 1;
+}
+
+/* tags y stack dentro de cada proyecto */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.project-stack {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* =============================
+   FORMULARIO DE CONTACTO
+============================= */
+
+.contact-form {
+  margin-top: 1.8rem;
+}
+
+.contact-form .form-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.contact-form .form-control {
+  font-size: 0.9rem;
+  border-radius: 10px;
+  border-color: var(--border);
+}
+
+.contact-form .form-control:focus {
+  box-shadow: none;
+  border-color: var(--accent);
+}
+
+/* Mensaje de feedback del formulario */
+#formMsg {
+  font-size: 0.9rem;
+}
+
+/* =============================
+   FOOTER
+============================= */
+
+.footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--bg);
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-sub {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* =============================
+   ANIMACIONES (fade-in)
+============================= */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 5rem;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-content {
+    padding-inline: 1rem;
+  }
+
+  .project-logo-container {
+    justify-content: center;
+  }
+}
+.skills-section {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.skill-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+}
+
+.skill-card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
