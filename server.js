@@ -44,39 +44,19 @@ const projects = [
     name: "IncluTech",
     description:
       "Página web de empresa IncluTech, dedicada a desarrollar soluciones tecnológicas inclusivas.",
-    logo: "/img/logos/inclutech-logo.png",
-    tags: ["Emprendimiento", "Soluciones tecnológicas Inclusivas"],
     Rol: ["Fundadora y desarrolladora Full Stack."],
-    Enfoque: ["Accesibilidad digital", "Tecnología con impacto social"],
+    link: "https://inclutech.onrender.com/"
+
   },
-  {
-    name: "IAcompaña",
+
+   {
+    name: "Tity Cristina Sonidos - Página Web",
     description:
-      "Aplicación interactiva diseñada para acompañar procesos de rehabilitación de niños, niñas y jóvenes de Teletón. Finalista en Hackathon IA 2025, organizada por Bendita IA",
-    logo: "/img/logos/iacompaña-logo.jpg",
-    tags: ["Salud", "Rehabilitación", "Acompañamiento personalizado"],
-    Rol: ["Diseño conceptual, UX, flujo de usuario y prototipo."],
+      "Página web de sonidista disidente Tity Cristina Sonidos, dedicada a audio en vivo y de sala, y producción técnica para shows en vivo",
+    Rol: ["Creadora desarrolladora Full Stack."],
+    link: "https://titycristinasonidos.onrender.com/"
   },
-  {
-    name: "Yo Te Apaño",
-    description:
-      "Plataforma de acompañamiento emocional y educativo para NNJ en contextos vulnerables, fortaleciendo sus trayectorias educativas.",
-    logo: "/img/logos/yoteapano-logo.png",
-    tags: ["Educación", "Inclusión"],
-    Rolk: [
-      "Creadora. Diseño de la experiencia, contenido pedagógico y estructura de la plataforma.",
-    ],
-  },
-  {
-    name: "CrohnCare+",
-    description:
-      "Aplicación para registrar síntomas, detectar patrones, monitorear crisis y generar reportes médicos para personas con enfermedad de Crohn.",
-    logo: "/img/logos/crohncare-logo.png",
-    tags: ["Salud", "Seguimiento Clínico"],
-    Rol: [
-      "Diseño del concepto, propuesta de MVP y exploración tecnológica.",
-    ],
-  },
+ 
 ];
 
 // -----------------------------
